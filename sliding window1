@@ -1,0 +1,12 @@
+l = list(map(int,input().split()))                # k is size of list
+k = int(input())
+i = 0
+j = k-1
+s = sum(l[:j+1])
+print(s)
+while j+1<len(l):
+    s += l[j+1]
+    s -= l[i]
+    i += 1
+    j += 1
+    print(s)
