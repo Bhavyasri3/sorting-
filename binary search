@@ -1,0 +1,16 @@
+#binary search
+l = list(map(int,input().split()))
+k = int(input())
+i = 0
+j = len(l)-1
+while i <= j:
+    m = (i+j)//2
+    if k == l[m]:
+        print(m)
+        break
+    elif k < l[m]:
+        j = m - 1
+    elif k > l[m]:
+        i = m + 1
+else:
+    print("No element found")
