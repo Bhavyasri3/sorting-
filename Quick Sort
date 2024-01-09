@@ -1,0 +1,19 @@
+# Quick Sort       (Divide array into three parts)
+def quicksort(l):
+    k = len(l)//2
+    small = []
+    equal = []
+    large = []
+    if len(l)<=1:
+        return l
+    for i in l:
+        if i == l[k]:
+            equal.append(i)
+        elif i > l[k]:
+            large.append(i)
+        else:
+            small.append(i)
+    return quicksort(small)+equal+quicksort(large)
+
+lst = list(map(int,input().split()))
+print(quicksort(lst))
